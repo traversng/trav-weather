@@ -1,7 +1,7 @@
 <div class="page-header">
     <h4>{{ weatherResult.city.name }} {{ days }} Day Weather Forecast</h4>
     Days: <a data-data-ng-class="{'bg-info' : days === '5'}" href="#/forecast/5">5</a> | <a data-ng-class="{'bg-info' : days === '7'}" href="#/forecast/7">7</a>
-    <a href="#/" class="btn btn-primary">Enter new zipcode</a>
+    <a href="#/" class="btn btn-primary">Return to search</a>
 </div>
 <div data-ng-repeat="w in weatherResult.list">
     <div class="row">
