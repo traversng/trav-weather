@@ -1,0 +1,12 @@
+<div class="page-header">
+    <h4>{{ weatherResult.city.name }} {{ days }} Day Weather Forecast</h4>
+    Days: <a data-data-ng-class="{'bg-info' : days === '5'}" href="#/forecast/5">5</a> | <a data-ng-class="{'bg-info' : days === '7'}" href="#/forecast/7">7</a>
+    <a href="#/" class="btn btn-primary">Enter new zipcode</a>
+</div>
+<div data-ng-repeat="w in weatherResult.list">
+    <div class="row">
+        <div class="col-md-12">
+            <weather-results weather-day="w" zipcode="{{ zipcode }}" convert-to-standard="convertToFahrenheit(daytimeTemp)" convert-to-date="convertToDate(dt)" date-format="EEE MMM dd, y"></weather-results>
+        </div>
+    </div>
+</div>
